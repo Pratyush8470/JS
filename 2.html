@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+
+    <link rel="stylesheet" href="css/fonts.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<style>
+
+</style>
+
+<body class="flex justify-center items-center">
+    <div class="w-8/12 py-48 ">
+        <div class="wrap"
+            style="padding: 30px;border: 2px solid black; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; display: flex;justify-content: center;">
+            <div class="w-full">
+                <table width="100%" class="text-center font-medium">
+                    <tr class="font-bold bg-[#FF9800] rounded">
+                        <td colspan="6" id="cname" class="py-6 text-[24px]"></td>
+                        <td>Invoice No : A-35</td>
+                    </tr>
+                    <tr class="font-bold bg-[#182173] text-white">
+                        <td class="py-3">sr no.</td>
+                        <td>Product Name</td>
+                        <td>Price</td>
+                        <td>Qty</td>
+                        <td>Total</td>
+                        <td>Discount</td>
+                        <td>Grand Total</td>
+                    </tr>
+                    <tr >
+                        <td class="py-2">1</td>
+                        <td>Apple 14pro max</td>
+                        <td id="prPrice1"></td>
+                        <td id="prQty1"></td>
+                        <td id="prTotal1"></td>
+                        <td id="prDis1"></td>
+                        <td id="prGt1"></td>
+                    </tr>
+                    <tr class="bg-[#E2DFE7]">
+                        <td class="py-2">2</td>
+                        <td>Samsung S24ultra</td>
+                        <td id="prPrice2"></td>
+                        <td id="prQty2"></td>
+                        <td id="prTotal2"></td>
+                        <td id="prDis2"></td>
+                        <td id="prGt2"></td>
+                    </tr>
+                    <tr>
+                        <td class="py-2">1</td>
+                        <td>Google pixel 8pro</td>
+                        <td id="prPrice3"></td>
+                        <td id="prQty3"></td>
+                        <td id="prTotal3"></td>
+                        <td id="prDis3"></td>
+                        <td id="prGt3"></td>
+                    </tr>
+                    <tr class="font-bold bg-[#182173] text-white">
+                        <td colspan="5"></td>
+                        <td class="py-3">Total : </td>
+                        <td id="tp"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let product_price1 = 110000,
+            product_price2 = 90000,
+            product_price3 = 78000;
+        let qty1 = 1,
+            qty2 = 1,
+            qty3 = 1;
+        let total1 = product_price1 * qty1,
+            total2 = product_price2 * qty2,
+            total3 = product_price3 * qty3;
+        let discount1 = 10,
+            discount2 = 12,
+            discount3 = 8;
+        let grand_total1 = product_price1 - (product_price1 / discount1),
+            grand_total2 = product_price2 - (product_price2 / discount2),
+            grand_total3 = product_price3 - (product_price3 / discount3);
+
+        let finalTotal =grand_total1+grand_total2+grand_total3;
+
+        document.getElementById("prPrice1").innerHTML = product_price1;
+        document.getElementById("prQty1").innerHTML = qty1;
+        document.getElementById("prTotal1").innerHTML = total1;
+        document.getElementById("prDis1").innerHTML = discount1;
+        document.getElementById("prGt1").innerHTML = grand_total1;
+
+        document.getElementById("prPrice2").innerHTML = product_price2;
+        document.getElementById("prQty2").innerHTML = qty2;
+        document.getElementById("prTotal2").innerHTML = total2;
+        document.getElementById("prDis2").innerHTML = discount2;
+        document.getElementById("prGt2").innerHTML = grand_total2;
+
+        document.getElementById("prPrice3").innerHTML = product_price3;
+        document.getElementById("prQty3").innerHTML = qty3;
+        document.getElementById("prTotal3").innerHTML = total3;
+        document.getElementById("prDis3").innerHTML = discount3;
+        document.getElementById("prGt3").innerHTML = grand_total3;
+        
+        document.getElementById("tp").innerHTML = finalTotal;
+
+        document.getElementById("cname").innerHTML = "ABC ELECTRONICS";
+
+    </script>
+</body>
+
+</html>

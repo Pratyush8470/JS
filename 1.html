@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+
+    <link rel="stylesheet" href="css/fonts.css">
+</head>
+
+<style>
+    
+    
+    :root{
+        --fonts:'Poppins';
+    }
+    .container {
+        width: 1140px;
+        margin: 0 auto;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .w-1 {
+        width: 8.33%;
+    }
+
+    .w-2 {
+        width: 16.66%;
+    }
+
+    .w-3 {
+        width: 25%;
+    }
+
+    .w-4 {
+        width: 33.33%;
+    }
+
+    .w-5 {
+        width: 42.66%;
+    }
+
+    .w-6 {
+        width: 50%;
+    }
+
+    .w-7 {
+        width: 58.33%;
+    }
+
+    .w-8 {
+        width: 66.66%;
+    }
+
+    .w-9 {
+        width: 75%;
+    }
+
+    .w-10 {
+        width: 83.33%;
+    }
+
+    .w-11 {
+        width: 92.66%;
+    }
+
+    .w-12 {
+        width: 100%;
+    }
+
+    .w-1,
+    .w-2,
+    .w-3,
+    .w-4,
+    .w-5,
+    .w-6,
+    .w-7,
+    .w-8,
+    .w-9,
+    .w-10,
+    .w-11,
+    .w-12 {
+        padding-left: var(--gutter-width);
+        padding-right: var(--gutter-width);
+    }
+
+    .py {
+        padding: 100px 0;
+    }
+
+    .wrap {
+        padding: 50px;
+        text-align: center;
+    }
+
+    .text {
+        margin-bottom: 40px;
+        font-size: 30px;
+    }
+</style>
+
+<body style="background-color: #E8ECD6;color: #C8DFEA;font-family: var(--fonts);">
+    <section class="py">
+        <div class="container" style="margin: 0 auto;">
+            <div class="title" style="text-align: center;">
+                <h1 style="font-size: 50px;color: rgb(9, 160, 236);text-decoration: underline;">Simple Interest Calculator</h1>
+            </div>
+            <div class="row"  style="justify-content: center;">
+                <div class="w-6">
+                    <div class="wrap" style="border: 2px solid #E8ECD6; padding: 30px; background-color: cadetblue; border-radius: 30px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                        <div class="text">
+                            <h4 id="pAmount"></h4>
+                        </div>
+                        <div class="text">
+                            <h4 id="rate"></h4>
+                        </div>
+                        <div class="text">
+                            <h4 id="time"></h4>
+                        </div>
+                        <div class="text">
+                            <h4 id="accrued"></h4>
+                        </div>
+                        <div class="text" style="margin: 0;">
+                            <h4 id="interest"></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        let p = 50000;
+        let r = 6;
+        let t = 2;
+        let A = (p* r * t)/100 + p;
+        let interest = A - p;
+
+        document.getElementById("pAmount").innerHTML = "Principle Amount : " + p;
+        document.getElementById("rate").innerHTML = "Rate of interest : " + r;
+        document.getElementById("time").innerHTML = "Number of years : " + t;
+        document.getElementById("accrued").innerHTML ="Total accrued amount : "+ A;
+        document.getElementById("interest").innerHTML = "Interest : "+interest;
+    </script>
+</body>
+
+</html>
